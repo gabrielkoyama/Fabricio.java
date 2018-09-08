@@ -6,11 +6,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
  
 @Controller
-@RequestMapping("/index.htm")
+
 public class Index {
     
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping("/index.htm")
     public String Page() {
         return "index";
+    }
+    
+    @RequestMapping("/todo.htm")
+    public String todo() {
+        return "todo";
     }
 }
